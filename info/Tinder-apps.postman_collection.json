@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "19522707-f428-412f-96e5-f55e122f4ca4",
+		"name": "Tinder-apps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1024381"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Member F 2\",\n    \"email\": \"memberf2@gmail.com\",\n    \"password\": \"password\",\n    \"gender\": \"Female\",\n    \"label\": \"Regular\",\n    \"quota\": 10,\n    \"status\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"memberm1@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lbWJlcm0xQGdtYWlsLmNvbSIsImV4cCI6MTcxNjA0NzQ2NCwiaWQiOjEsIm5hbWUiOiJNZW1iZXIgTSAxIn0.d2CIxcPT1kY2SqDquxKaDE6Bsgs4WtnH31v2a5e-ZI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/view",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lbWJlcm0xQGdtYWlsLmNvbSIsImV4cCI6MTcxNjA0NzQ2NCwiaWQiOjEsIm5hbWUiOiJNZW1iZXIgTSAxIn0.d2CIxcPT1kY2SqDquxKaDE6Bsgs4WtnH31v2a5e-ZI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"direction\": \"left\",\n    \"member_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/swipe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"swipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Package List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lbWJlcm0xQGdtYWlsLmNvbSIsImV4cCI6MTcxNjA0NzQ2NCwiaWQiOjEsIm5hbWUiOiJNZW1iZXIgTSAxIn0.d2CIxcPT1kY2SqDquxKaDE6Bsgs4WtnH31v2a5e-ZI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/package",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lbWJlcm0xQGdtYWlsLmNvbSIsImV4cCI6MTcxNjA0NzQ2NCwiaWQiOjEsIm5hbWUiOiJNZW1iZXIgTSAxIn0.d2CIxcPT1kY2SqDquxKaDE6Bsgs4WtnH31v2a5e-ZI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package_id\": 1,\n    \"qty\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/purchase",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
