@@ -1,0 +1,6 @@
+server:
+  address: ":8080"
+database:
+  dsn: "root:@tcp(127.0.0.1:3306)/tinder_db"
+jwt:
+  secret: "739f3eb84589b6a6f1e286d8dbe40cdf"
